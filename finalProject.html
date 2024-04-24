@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!--Name: Jiayu Zhang
+    Blackboard User Name: jzhang11
+    Class Section: WEB115
+	-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-115 Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Build Your Meal Plan</h1>
+            <p>Name: Jiayu Zhang</p>
+            <p>Course: WEB115.0002</p>
+        </div>
+    </header>
+
+    <main>
+    <div class="formContainer">
+        <form id="mealPlanForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="goal">Goal for the Week:</label>
+            <textarea id="goal" name="goal" rows="2" cols="50" required></textarea>
+            <br>
+            <label for="weekday">Select Weekday:</label>
+            <select id="weekday" name="weekday">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <label for="meal">Select Meal:</label>
+            <select id="meal" name="meal">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Snack">Snack</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+            <input type="text" id="mealInput" placeholder="Enter meal details...">
+            <button type="button" onclick="addMeal()">Add Meal</button>
+            <br>
+            <button type="button" onclick="generateMealPlan()">Generate Meal Plan</button>
+            <button type="button" onclick="clearMealPlan()">Clear Meal Plan</button>
+        </form>
+    </div>
+        <div id="mealList">
+            <div id="mealPlaceHolder">No meals added yet.</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerBottom">
+            &copy; 2024 Build Your Meal Plan. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="projectJS.js"></script>
+</body>
+</html>
